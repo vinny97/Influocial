@@ -1,0 +1,42 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/bootstrap-edit";
+@import "base/defaults";
+@import "base/utilities";
+@import "base/animations";
+
+@import "components/loader";
+@import "components/headings";
+@import "components/cards";
+@import "components/shape-divider";
+@import "components/footer";
+
+@import "components/slider";
+@import "components/helix";
+@import "components/why-use";
+@import "components/card-section";
+@import "components/create-campaigns";
+
+@import "components/pentagonal-prism";
+@import "components/video";
+@import "components/feature";
+@import "components/marketing";
+
+@import "components/3d-cards";
+@import "components/accordion-h";
+@import "components/campaigning";
+@import "components/other-features";
+
+@import "components/solution";
+
+@import "components/about";
+
+@import "components/contact-form";
+
+//@import "pages";
+
+.height50 {
+	height: 50vh;
+}
