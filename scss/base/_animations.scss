@@ -1,1 +1,73 @@
-
+.anim.zoomIn {
+	transform: scale(0);
+	transition: transform 1s;
+}
+.anim.zoomIn.animate {
+	transform: scale(1);
+}
+.anim.fadeIn {
+	opacity: 0;
+	transition: opacity 1s;
+}
+.anim.fadeIn.animate {
+	opacity: 1;
+}
+.anim.fadeUp {
+	transform: translateY(100px);
+	opacity: 0;
+	transition: transform 1s, opacity 1s;
+}
+.anim.fadeUp.animate {
+	transform: translateY(0px);
+	opacity: 1;
+	transform: scale(1);
+}
+.anim.fadeDown {
+	transform: translateY(-100px);
+	opacity: 0;
+	transition: transform 1s, opacity 1s;
+}
+.anim.fadeDown.animate {
+	transform: translateY(0px);
+	opacity: 1;
+	transform: scale(1);
+}
+.anim.fadeIn {
+	opacity: 0;
+	transition: opacity 1s;
+}
+.anim.fadeIn.animate {
+	opacity: 1;
+}
+.anim.fadeLeft {
+	transform: translateX(100px);
+	opacity: 0;
+	transition: transform 1s, opacity 1s;
+}
+.anim.fadeLeft.animate {
+	transform: translateX(0);
+	opacity: 1;
+}
+.anim.fadeRight {
+	transform: translateX(-100px);
+	opacity: 0;
+	transition: transform 1s, opacity 1s;
+}
+.anim.fadeRight.animate {
+	transform: translateX(0);
+	opacity: 1;
+}
+.anim.slideDown {
+	transform: translateY(-500px);
+	transition: transform 1s;
+}
+.anim.slideDown.animate {
+	transform: translateY(0);
+}
+.anim.slideLeft {
+	transform: translateX(500px);
+	transition: transform 1s;
+}
+.anim.slideLeft.animate {
+	transform: translateX(0);
+}
