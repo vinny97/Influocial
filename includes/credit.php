@@ -1,5 +1,5 @@
-<?php
+gh<?php
 echo '
-<!-- Designed and Developed by Ammar Bohra | ammar@rajiq.com -->
+<!-- Designed and Developed by Varinder Singh -->
 ';
 ?>
