@@ -1,0 +1,17 @@
+.other-features {
+	background-color: $red-vl;
+	&__card {
+		padding: 10px;
+		.title {
+			font-size: 32px;
+			font-weight: 700;
+			color: $red-d;
+			margin-bottom: 20px;
+		}
+		.desc {
+			font-size: 22px;
+			font-weight: 300;
+			color: $red-vd;
+		}
+	}
+}

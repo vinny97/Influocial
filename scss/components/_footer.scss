@@ -1,0 +1,32 @@
+.footer {
+	&__link {
+		color: #fff;
+		text-decoration: none;
+		font-size: 16px;
+		padding: 10px;
+		@media (min-width: 768px) and (max-width: 991.98px) {
+			white-space: nowrap;
+			padding: 8px;
+		}
+		@media (min-width: 992px) {
+			font-size: 24px;
+			margin-left: 20px;
+		}
+	}
+	&__social {
+		padding: 5px;
+		margin-left: 5px;
+		i {
+			font-size: 24px;
+			color: $blue-d;
+		}
+	}
+	.copyright {
+		font-size: 20px;
+		text-align: center;
+		color: $blue-vd;
+		@media (min-width: 768px) {
+			text-align: start;
+		}
+	}
+}

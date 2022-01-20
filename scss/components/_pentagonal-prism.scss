@@ -1,0 +1,172 @@
+html {
+	--card-height: 300px;
+	--translateZ: 200px;
+	--rotateX: 10deg;
+}
+@media (min-width: 768px) {
+	html {
+		--card-height: 350px;
+		--translateZ: 350px;
+	}
+}
+@media (min-width: 1400px) {
+	html {
+		--card-height: 400px;
+		--translateZ: 400px;
+	}
+}
+.pentagonal-prism {
+	padding: 100px 0;
+	background: $pink-vl;
+	position: relative;
+	height: 100vh;
+	min-height: 640px;
+	max-height: 700px;
+	@media (min-width: 768px) {
+		min-height: 700px;
+		max-height: 800px;
+	}
+	@media (min-width: 1400px) {
+		min-height: 800px;
+		max-height: 900px;
+	}
+	.blobSvg {
+		position: absolute;
+		width: 400px;
+		&:nth-child(1) {
+			left: 30%;
+			top: 30%;
+			width: 500px;
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		&:nth-child(2) {
+			top: 50%;
+			right: 10%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	&__text {
+		width: 300px;
+		position: absolute;
+		top: 80px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		@media (min-width: 768px) {
+			width: 600px;
+		}
+	}
+	.sub {
+		font-size: 22px;
+		color: $pink-d;
+		font-weight: 300;
+		@media (min-width: 768px) {
+			font-size: 32px;
+		}
+		@media (min-width: 1400px) {
+			font-size: 40px;
+		}
+	}
+	.heading {
+		font-size: 20px;
+		font-weight: 700;
+		color: $pink-vd;
+		margin-bottom: 10px;
+		line-height: 1.2;
+		@media (min-width: 768px) {
+			font-size: 30px;
+		}
+		@media (min-width: 1400px) {
+			font-size: 35px;
+			margin-bottom: 20px;
+		}
+	}
+	.desc {
+		font-size: 18px;
+		font-weight: 300;
+		color: $pink-vd;
+		line-height: 1.3;
+		ul {
+			list-style: none;
+			padding: 0;
+			li {
+				padding-left: 1.3em;
+				&::before {
+					content: "\f058";
+					font-family: "FontAwesome";
+					color: $pink-d;
+					font-weight: bold;
+					display: inline-block;
+					width: 1.3em;
+					margin-left: -1.3em;
+				}
+			}
+		}
+		@media (min-width: 768px) {
+			font-size: 22px;
+			line-height: 1.4;
+		}
+		@media (min-width: 1400px) {
+			font-size: 22px;
+		}
+	}
+	.btn {
+		padding: 10px 20px;
+		color: #fff;
+		background: $pink-d;
+		margin-top: 20px;
+		@media (min-width: 768px) {
+			font-size: 20px;
+			margin-top: 40px;
+		}
+	}
+	&__scene {
+		height: var(--card-height);
+		width: calc(var(--card-height) / 1.2);
+		perspective: 2000px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+		.model {
+			height: var(--card-height);
+			width: calc(var(--card-height) / 1.2);
+			position: relative;
+			transform-style: preserve-3d;
+			animation: rotate 10s linear 0.5s infinite;
+			animation-play-state: paused;
+			&.play {
+				animation-play-state: running;
+			}
+		}
+		@keyframes rotate {
+			0% {
+				transform: rotateX(var(--rotateX)) rotateY(0deg);
+			}
+			100% {
+				transform: rotateX(var(--rotateX)) rotateY(-360deg);
+			}
+		}
+		.face {
+			height: var(--card-height);
+			width: calc(var(--card-height) / 1.2);
+			position: absolute;
+			border-radius: 15px;
+			&:nth-of-type(1) {
+				transform: rotateY(0deg) translateZ(var(--translateZ));
+			}
+			&:nth-of-type(2) {
+				transform: rotateY(72deg) translateZ(var(--translateZ));
+			}
+			&:nth-of-type(3) {
+				transform: rotateY(144deg) translateZ(var(--translateZ));
+			}
+			&:nth-of-type(4) {
+				transform: rotateY(216deg) translateZ(var(--translateZ));
+			}
+			&:nth-of-type(5) {
+				transform: rotateY(288deg) translateZ(var(--translateZ));
+			}
+		}
+	}
+}

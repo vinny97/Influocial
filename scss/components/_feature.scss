@@ -1,0 +1,138 @@
+.feature-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	background-color: #fff;
+	padding: 40px 20px;
+	border-radius: 32px;
+	box-shadow: 0 30px 55px 0 rgba(22, 21, 88, 0.06);
+	.icon {
+		padding: 15px;
+		background-color: $red-vl;
+		color: $red-d;
+		border-radius: 8px;
+	}
+	.title {
+		color: $red-vd;
+		font-size: 24px;
+		font-weight: 600;
+		margin: 30px 0 10px 0;
+		@media (min-width: 768px) {
+			font-size: 28px;
+		}
+	}
+	.desc {
+		font-size: 18px;
+		font-weight: 300;
+	}
+}
+.features {
+	&--influencers {
+		.feature {
+			background-image: linear-gradient(
+				180deg,
+				transparent 0%,
+				transparent 30%,
+				#faf0f8 30%,
+				#faf0f8 70%,
+				transparent 70%,
+				transparent 100%
+			);
+			position: relative;
+		}
+		.feature ~ .feature {
+			margin-top: 100px;
+		}
+		.title {
+			font-size: 22px;
+			@media (min-width: 768px) {
+				font-size: 32px;
+			}
+			font-weight: 600;
+			margin-bottom: 20px;
+			color: $pink-vd;
+			text-align: center;
+			&::before {
+				content: "\f00c";
+				font-family: "FontAwesome";
+				margin-right: 20px;
+				color: $pink-d;
+			}
+		}
+		.feature-img {
+			width: 100%;
+		}
+	}
+	&--brands {
+		background-color: $red-vl;
+		@media (min-width: 992px) {
+			.container {
+				max-width: 960px;
+			}
+		}
+		.first,
+		.last {
+			font-size: 1.25rem;
+			font-weight: 600;
+			color: $red-vd;
+			background-color: #f7dee3;
+			padding: 20px 10px;
+			border-radius: 10px;
+			box-shadow: 0 30px 55px 0 rgba(22, 21, 88, 0.06);
+			text-align: center;
+		}
+		.col-12 {
+			z-index: 1;
+			&:nth-of-type(4n + 1) {
+				.icon {
+					color: $blue-d;
+					background-color: $blue-vl;
+				}
+				.title {
+					color: $blue-vd;
+				}
+			}
+			&:nth-of-type(4n + 2) {
+				.icon {
+					color: $green-d;
+					background-color: $green-vl;
+				}
+				.title {
+					color: $green-vd;
+				}
+			}
+			&:nth-of-type(4n + 3) {
+				.icon {
+					color: $pink-d;
+					background-color: $pink-vl;
+				}
+				.title {
+					color: $pink-vd;
+				}
+			}
+			&:nth-of-type(4n + 4) {
+				.icon {
+					color: $yellow-d;
+					background-color: $yellow-vl;
+				}
+				.title {
+					color: $yellow-vd;
+				}
+			}
+		}
+		svg {
+			position: absolute;
+			transform: translate(-50%, -50%);
+			z-index: 0;
+			&:nth-of-type(1) {
+				top: 25%;
+				left: 40%;
+			}
+			&:nth-of-type(2) {
+				top: 77%;
+				left: 60%;
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+.why-use {
+	background-color: #f4f4f4;
+	ul {
+		list-style: none;
+		padding: 0;
+		position: relative;
+		img {
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			transform: translate(-50%, -50%);
+			opacity: 0.5;
+			z-index: 0;
+		}
+	}
+	li {
+		font-size: 1rem;
+		@media (min-width: 768px) {
+			font-size: 22px;
+		}
+		color: $red-vd;
+		padding-left: 40px;
+		z-index: 1;
+	}
+	li:before {
+		content: "\f00c"; /* FontAwesome Unicode */
+		font-family: FontAwesome;
+		font-size: 28px;
+		color: $red-vd;
+		display: inline-block;
+		margin-left: -40px; /* same as padding-left set on li */
+		width: 40px; /* same as padding-left set on li */
+	}
+}

@@ -1,0 +1,54 @@
+.campaigning {
+	&__lead {
+		font-size: 22px;
+		font-weight: 500;
+		color: $blue-vd;
+		text-align: center;
+		margin-bottom: 100px;
+	}
+}
+.campaign {
+	&__heading {
+		font-size: 28px;
+		font-weight: 700;
+		color: $blue-vd;
+		text-align: center;
+	}
+	&__type {
+		background-color: $blue-vl;
+		border-radius: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 40px;
+		margin-top: 50px;
+		min-height: 200px;
+		@media (min-width: 992px) {
+			flex-direction: row;
+		}
+		img {
+			align-self: stretch;
+			height: 150px;
+			margin: 0 0 50px 0;
+			@media (min-width: 992px) {
+				margin: 0 50px 0 0;
+			}
+		}
+		.title {
+			font-size: 32px;
+			font-weight: 700;
+			color: $blue-vd;
+			@media (max-width: 991.98px) {
+				text-align: center;
+			}
+		}
+		.desc {
+			font-size: 22px;
+			font-weight: 300;
+			color: $blue-vd;
+			@media (max-width: 991.98px) {
+				text-align: center;
+			}
+		}
+	}
+}

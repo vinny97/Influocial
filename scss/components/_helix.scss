@@ -1,0 +1,22 @@
+.helix-section {
+	h2 {
+		font-size: 32px;
+		font-weight: 700;
+		color: $blue-vd;
+		@media (min-width: 1200px) {
+			font-size: 40px;
+		}
+	}
+}
+.helix {
+	height: calc(7 * 500px + 100vh);
+	position: relative;
+	overflow-x: hidden;
+	canvas {
+		margin: 0;
+		padding: 0;
+		height: 100vh;
+		width: 100%;
+		z-index: -1;
+	}
+}

@@ -1,0 +1,72 @@
+.heading {
+	&__1 {
+		font-weight: 700;
+		margin-bottom: 70px;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -30px;
+			left: 0;
+			height: 8px;
+			width: 56px;
+		}
+		&--center {
+			text-align: center;
+			&::after {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+		&--blue {
+			color: $blue-vd;
+			&::after {
+				background-color: $blue-d;
+			}
+		}
+		&--red {
+			color: $red-vd;
+			&::after {
+				background-color: $red-d;
+			}
+		}
+	}
+	&__underline {
+		font-size: 32px;
+		@media (min-width: 768px) {
+			font-size: 50px;
+		}
+		font-weight: 700;
+		margin-bottom: 70px;
+		display: inline-block;
+		position: relative;
+		z-index: 2;
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 40%;
+			width: 100%;
+			z-index: -1;
+		}
+		&--blue {
+			color: $blue-vd;
+			&::before {
+				background-color: $blue-l;
+			}
+		}
+		&--pink {
+			color: $pink-vd;
+			&::before {
+				background-color: $pink-l;
+			}
+		}
+		&--red {
+			color: $red-vd;
+			&::before {
+				background-color: $red-l;
+			}
+		}
+	}
+}

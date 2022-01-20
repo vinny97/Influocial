@@ -1,0 +1,24 @@
+.about {
+	.heading__1 {
+		margin-bottom: 100px;
+	}
+	p {
+		font-size: 1.125rem;
+		font-weight: 300;
+		color: $blue-vd;
+		@media (min-width: 768px) {
+			font-size: 1.25rem;
+		}
+		@media (min-width: 1200px) {
+			font-size: 1.5rem;
+		}
+	}
+	.blue-blur {
+		position: absolute;
+		top: 50%;
+		left: 100%;
+		transform: translate(-50%, -50%);
+		height: 100%;
+		opacity: 0.5;
+	}
+}
